@@ -1,0 +1,31 @@
+{
+
+  "manifest_version": 2,
+  "name": "AutoArsenalTicket",
+  "version": "1.0",
+
+  "description": "Automatically refresh the arsenal ticket selling page till one available ticket is found",
+
+  "icons": {
+    "48": "icons/arsenal.svg"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icons/arsenal.svg",
+    "default_title": "autoTicket",
+    "default_popup": "popup/activate.html"
+  },
+
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.eticketing.co.uk/arsenal/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
